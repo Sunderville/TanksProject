@@ -11,9 +11,6 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     @Override
