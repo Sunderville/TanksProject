@@ -1,4 +1,4 @@
 package com.sunderville.tanks.domain;
 
-public class Bottom {
+public class Tank {
 }
