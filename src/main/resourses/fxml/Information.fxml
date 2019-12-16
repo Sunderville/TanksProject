@@ -11,10 +11,21 @@
     <children>
         <AnchorPane layoutX="-1.0" layoutY="61.0" prefHeight="539.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
          <children>
-            <TextArea layoutX="21.0" layoutY="40.0" prefHeight="145.0" prefWidth="663.0" text="1. Высота каждого пояса принята за 1500 мм.&#10;2. ..." />
+            <TextArea layoutX="21.0" layoutY="56.0" prefHeight="284.0" prefWidth="663.0" text="1. Высота каждого пояса принята за 1500 мм.&#10;2. ..." />
             <Text layoutX="21.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Примечания">
                <font>
                   <Font size="14.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="23.0" layoutY="377.0" prefHeight="148.0" prefWidth="663.0" text="1. Высота каждого пояса принята за 1500 мм.&#10;2. ..." />
+            <Text fill="#a4a4a4" layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="По расчётам">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#a4a4a4" layoutX="21.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="По приложению">
+               <font>
+                  <Font size="10.0" />
                </font>
             </Text>
          </children>
