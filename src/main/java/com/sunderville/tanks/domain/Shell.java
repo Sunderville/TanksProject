@@ -3,14 +3,18 @@ package com.sunderville.tanks.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shell {
 
-    private static final int PI = 3140;
+// Возможно, стоит переделать на BigDecimal
 
 
-    public static long getShellVolume(Tank tank) {
+class Shell {
 
-        int perimeter = (2*PI) * (Integer.parseInt(tank.getDiameterText())/2)/1000;
+    private static final double PI = 3.14;
+
+
+    static double getShellVolume(Tank tank) {
+
+        double perimeter = (2d*PI) * (Double.parseDouble(tank.getDiameterText())/2d/1000d);
 
         List<String> allRingsTextList = new ArrayList<>();
         allRingsTextList.add(tank.getRing1Text());
@@ -26,10 +30,10 @@ public class Shell {
         allRingsTextList.add(tank.getRing11Text());
         allRingsTextList.add(tank.getRing12Text());
 
-        int allRingsVolume = 0;
+        double allRingsVolume = 0;
         for (String s : allRingsTextList) {
             if (s.equals("")) s = "0";
-            int sI = 1500 * perimeter * Integer.parseInt(s)/1000;
+            double sI = 1.5d * perimeter * Double.parseDouble(s)/1000d;
             allRingsVolume = allRingsVolume + sI;
         }
 

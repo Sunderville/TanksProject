@@ -4,9 +4,9 @@ import com.sunderville.tanks.config.Config;
 
 import static com.sunderville.tanks.domain.Checkings.defineTankType;
 
-public class Etc {
+class Etc {
 
-    public static long getEtcMass(Tank tank) {
+    static double getEtcMass(Tank tank) {
 
         String etcMass = "0";
 
@@ -64,7 +64,7 @@ public class Etc {
                 break;
         }
 
-        return Long.parseLong(etcMass);
+        return Double.parseDouble(etcMass);
     }
 }
 

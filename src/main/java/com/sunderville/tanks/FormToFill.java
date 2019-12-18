@@ -1,17 +1,17 @@
 package com.sunderville.tanks;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.sunderville.tanks.domain.Tank;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import com.sunderville.tanks.MainWindowController;
+
+import java.io.File;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.util.ResourceBundle;
 
 public class FormToFill {
 
@@ -23,12 +23,9 @@ public class FormToFill {
 
     @FXML
     private Button save_log_button;
-
     @FXML
     private Button print_button;
 
-    @FXML
-    private TextField customer_name;
     @FXML
     private MenuButton month;
     @FXML
@@ -37,113 +34,17 @@ public class FormToFill {
     private MenuButton form_of_property_menubutton;
 
     @FXML
-    private MenuItem OOO;
-
-    @FXML
-    private MenuItem AO;
-
-    @FXML
-    private MenuItem PAO;
-
-    @FXML
-    private MenuItem MUP;
-
-    @FXML
-    private MenuItem IP;
-
-    @FXML
-    private MenuItem individual;
-
-    @FXML
-    private MenuItem other_property_form;
-
+    private TextField customer_name;
     @FXML
     private TextField contact_name;
-
     @FXML
     private TextField phone_number;
-
     @FXML
     private TextField haul_to;
-
     @FXML
     private TextField quantity;
-
     @FXML
     private TextArea comment_field;
-
-    @FXML
-    private MenuItem january;
-
-    @FXML
-    private MenuItem february;
-
-    @FXML
-    private MenuItem march;
-
-    @FXML
-    private MenuItem april;
-
-    @FXML
-    private MenuItem may;
-
-    @FXML
-    private MenuItem june;
-
-    @FXML
-    private MenuItem july;
-
-    @FXML
-    private MenuItem august;
-
-    @FXML
-    private MenuItem september;
-
-    @FXML
-    private MenuItem october;
-
-    @FXML
-    private MenuItem november;
-
-    @FXML
-    private MenuItem december;
-
-    @FXML
-    private MenuItem unknowember;
-
-    @FXML
-    private MenuItem year2020;
-
-    @FXML
-    private MenuItem year2021;
-
-    @FXML
-    private MenuItem year2022;
-
-    @FXML
-    private MenuItem year2023;
-
-    @FXML
-    private MenuItem year2024;
-
-    @FXML
-    private MenuItem year2025;
-
-    @FXML
-    private MenuItem year2026;
-
-    @FXML
-    private MenuItem year2027;
-
-    @FXML
-    private MenuItem year2028;
-
-    @FXML
-    private MenuItem year2029;
-
-    @FXML
-    private Button return_to_main_window_button;
-
 
 
     @FXML
@@ -174,7 +75,6 @@ public class FormToFill {
     void other_property_form(ActionEvent event) {
         form_of_property_menubutton.setText("другая форма собственности");
     }
-
 
     @FXML
     void january(ActionEvent event) {
@@ -276,7 +176,7 @@ public class FormToFill {
     void initialize() {
 //        compileLog(tank);
 
-        // Реализовать
+//TODO Реализовать сохранение и печать
 //        print_button();
 //        save_log_button();
 
@@ -290,6 +190,9 @@ public class FormToFill {
                                   MenuButton form_of_property, TextField customer_name,
                                   TextField contact_name, TextField phone_number,
                                   TextField haul_to, TextField quantity, TextArea comment_field){
+
+//        File log = new File("c:\\tanklog.txt" +"-"+ LocalDateTime.now());
+//        log.
 
 
 

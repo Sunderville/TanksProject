@@ -48,7 +48,7 @@
             <TextField fx:id="haul_to" layoutX="160.0" layoutY="103.0" prefHeight="25.0" prefWidth="190.0" />
             <TextField fx:id="quantity" layoutX="632.0" layoutY="103.0" prefHeight="25.0" prefWidth="43.0" />
             <TextArea fx:id="comment_field" layoutX="123.0" layoutY="201.0" prefHeight="104.0" prefWidth="391.0" />
-            <MenuButton fx:id="month" layoutX="292.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="месяц">
+            <MenuButton fx:id="month" layoutX="292.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="месяц">
                <items>
                   <MenuItem fx:id="january" mnemonicParsing="false" onAction="#january" text="январь" />
                   <MenuItem fx:id="february" mnemonicParsing="false" onAction="#february" text="февраль" />
@@ -64,11 +64,8 @@
                   <MenuItem fx:id="december" mnemonicParsing="false" onAction="#december" text="декабрь" />
                   <MenuItem fx:id="unknowember" mnemonicParsing="false" onAction="#unknowember" text="хрензнаябрь" />
                </items>
-               <font>
-                  <Font size="10.0" />
-               </font>
             </MenuButton>
-            <MenuButton fx:id="year" layoutX="384.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="год">
+            <MenuButton fx:id="year" layoutX="413.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="год">
                <items>
                   <MenuItem fx:id="year2020" mnemonicParsing="false" onAction="#year2020" text="2020" />
                   <MenuItem fx:id="year2021" mnemonicParsing="false" onAction="#year2021" text="2021" />
@@ -81,9 +78,6 @@
                   <MenuItem fx:id="year2028" mnemonicParsing="false" onAction="#year2028" text="2028" />
                   <MenuItem fx:id="year2029" mnemonicParsing="false" onAction="#year2029" text="2029" />
                </items>
-               <font>
-                  <Font size="10.0" />
-               </font>
             </MenuButton>
             </children>
         </AnchorPane>
@@ -92,9 +86,5 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <Button fx:id="return_to_main_window_button" layoutX="582.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" text="На главное окно">
-         <font>
-            <Font size="10.0" />
-         </font></Button>
     </children>
 </AnchorPane>

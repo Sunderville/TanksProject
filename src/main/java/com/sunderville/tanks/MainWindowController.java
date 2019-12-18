@@ -24,133 +24,109 @@ public class MainWindowController {
 
     @FXML
     private ResourceBundle resources;
-
     @FXML
     private URL location;
-
-    @FXML
-    private TextField ring12;
-
-    @FXML
-    private TextField ring11;
-
-    @FXML
-    private TextField ring10;
-
-    @FXML
-    private TextField ring9;
-
-    @FXML
-    private TextField ring8;
-
-    @FXML
-    private TextField ring7;
-
-    @FXML
-    private TextField ring6;
-
-    @FXML
-    private TextField ring5;
-
-    @FXML
-    private TextField ring4;
-
-    @FXML
-    private TextField ring3;
-
-    @FXML
-    private TextField ring2;
-
-    @FXML
-    private TextField ring1;
-
-    @FXML
-    private TextField bottom_center_thikness;
-
-    @FXML
-    private TextField bottom_rim_thikness;
-
-    @FXML
-    private TextField roof_thikness;
-
-    @FXML
-    private Button log_button;
-
-    @FXML
-    private Button calculate_button;
-
-    @FXML
-    private TextField insulation_weight;
-
-    @FXML
-    private TextField heater_weight;
-
-    @FXML
-    private TextField other_weight1;
-
-    @FXML
-    private TextField other_weight2;
-
-    @FXML
-    private TextField other_weight1_name;
-
-    @FXML
-    private TextField other_weight2_name;
-
-    @FXML
-    private MenuButton steel_type;
-
-    public MenuButton getSteel_type() {
-        return steel_type;
-    }
-
-    @FXML
-    private MenuItem s09selection;
-    @FXML
-    private MenuItem s12selection;
-
-    @FXML
-    private TextField result_mass;
-
-    @FXML
-    private TextField ton_price;
-
-    @FXML
-    private TextField result_price;
 
     @FXML
     private MenuButton diameter;
 
     @FXML
-    private MenuItem d3800;
+    private TextField ring12;
     @FXML
-    private MenuItem d4730;
+    private TextField ring11;
     @FXML
-    private MenuItem d6630;
+    private TextField ring10;
     @FXML
-    private MenuItem d7580;
+    private TextField ring9;
     @FXML
-    private MenuItem d8530;
+    private TextField ring8;
     @FXML
-    private MenuItem d10430;
+    private TextField ring7;
     @FXML
-    private MenuItem d15180;
+    private TextField ring6;
     @FXML
-    private MenuItem d18980;
+    private TextField ring5;
     @FXML
-    private MenuItem d20920;
+    private TextField ring4;
     @FXML
-    private MenuItem d22800;
+    private TextField ring3;
     @FXML
-    private MenuItem d28500;
+    private TextField ring2;
     @FXML
-    private MenuItem d34200;
+    private TextField ring1;
+
     @FXML
-    private MenuItem d39900;
+    private TextField bottom_center_thikness;
     @FXML
-    private MenuItem d45600;
+    private TextField bottom_rim_thikness;
     @FXML
-    private MenuItem d60700;
+    private TextField roof_thikness;
+
+    @FXML
+    private Button log_button;
+    @FXML
+    private Button calculate_button;
+    @FXML
+    private Button information_button;
+
+    @FXML
+    private TextField insulation_weight;
+    @FXML
+    private TextField heater_weight;
+    @FXML
+    private TextField other_weight1;
+    @FXML
+    private TextField other_weight2;
+    @FXML
+    private TextField other_weight1_name;
+    @FXML
+    private TextField other_weight2_name;
+
+    @FXML
+    private MenuButton steel_type;
+    @FXML
+    private TextField result_mass;
+    @FXML
+    private TextField ton_price;
+    @FXML
+    private TextField result_price;
+
+
+//    Возможно, удалить
+//    @FXML
+//    private MenuItem s09selection;
+//    @FXML
+//    private MenuItem s12selection;
+//    @FXML
+//    private MenuItem d3800;
+//    @FXML
+//    private MenuItem d4730;
+//    @FXML
+//    private MenuItem d6630;
+//    @FXML
+//    private MenuItem d7580;
+//    @FXML
+//    private MenuItem d8530;
+//    @FXML
+//    private MenuItem d10430;
+//    @FXML
+//    private MenuItem d15180;
+//    @FXML
+//    private MenuItem d18980;
+//    @FXML
+//    private MenuItem d20920;
+//    @FXML
+//    private MenuItem d22800;
+//    @FXML
+//    private MenuItem d28500;
+//    @FXML
+//    private MenuItem d34200;
+//    @FXML
+//    private MenuItem d39900;
+//    @FXML
+//    private MenuItem d45600;
+//    @FXML
+//    private MenuItem d60700;
 
     @FXML
     void d15180s(ActionEvent event) {
@@ -209,9 +185,6 @@ public class MainWindowController {
         diameter.setText("8530");
     }
 
-    @FXML
-    private Button information_button;
-
 
     @FXML
     void sSt3selected(ActionEvent event) {
@@ -221,7 +194,6 @@ public class MainWindowController {
     void s09selected(ActionEvent event) {
         steel_type.setText("09Г2С");
     }
-
     @FXML
     void s12selected(ActionEvent event) {
         steel_type.setText("12Х18Н10Т");
@@ -241,7 +213,7 @@ public class MainWindowController {
                         other_weight1.getText(), other_weight2_name.getText(), other_weight2.getText());
 
                 result_mass.setText(String.valueOf(resultMass(tank, steel_type.getText())));
-                result_price.setText(String.valueOf(resultPrice(tank, ton_price.getText())));
+                result_price.setText(String.valueOf(resultPrice(tank, steel_type.getText(), ton_price.getText())));
 
             }else {
                 Shake shake = new Shake(diameter);
@@ -255,11 +227,7 @@ public class MainWindowController {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Parent root = fxmlLoader.getRoot();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root));
-                stage.showAndWait();}
-
+            }
         });
 
         log_button.setOnAction(actionEvent -> {
@@ -281,6 +249,7 @@ public class MainWindowController {
 
 
 
+//TODO: после обратного перехода главное окно отображается некорректно
 
         information_button.setOnAction(event -> {
             information_button.getScene().getWindow().hide();
@@ -299,9 +268,6 @@ public class MainWindowController {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
-
     }
-
-
 }
 

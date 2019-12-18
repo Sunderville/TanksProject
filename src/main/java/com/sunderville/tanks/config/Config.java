@@ -3,7 +3,6 @@ package com.sunderville.tanks.config;
 import java.io.InputStream;
 import java.util.Properties;
 
-
 public class Config {
 
     private static Properties properties = new Properties();

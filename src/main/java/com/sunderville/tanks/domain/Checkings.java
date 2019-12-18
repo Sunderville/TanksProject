@@ -8,9 +8,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Checkings {
+class Checkings {
 
-    public static String defineTankType(Tank tank) {
+    static String defineTankType(Tank tank) {
         String type = "";
         if(tank.getDiameterText().equals("3800") && ringsNumber(tank) == 3) type = "РВС-50";
         else if(tank.getDiameterText().equals("4730") && ringsNumber(tank) == 4) type = "РВС-100";
@@ -27,12 +27,11 @@ public class Checkings {
         else if(tank.getDiameterText().equals("28500") && ringsNumber(tank) == 12) type = "РВС-10000-12";
         else if(tank.getDiameterText().equals("34200") && ringsNumber(tank) == 8) type = "РВС-10000-18";
         else if(tank.getDiameterText().equals("39900") && ringsNumber(tank) == 12) type = "РВС-20000";
-        else if(tank.getDiameterText().equals("45600") && ringsNumber(tank) == 8) type = "РВС-30000";
-        else if(tank.getDiameterText().equals("60700") && ringsNumber(tank) == 8) type = "РВС-50000";
-            // Сделать в виде всплывающего окна
+        else if(tank.getDiameterText().equals("45600") && ringsNumber(tank) == 12) type = "РВС-30000";
+        else if(tank.getDiameterText().equals("60700") && ringsNumber(tank) == 12) type = "РВС-50000";
+
         else try {
                 diamRingDiscrep();
-
 
             throw new DefineTankTypeException ("Несоответствие диаметра и количества поясов. Проверьте введённые данные");
         } catch (DefineTankTypeException e) {
@@ -44,7 +43,7 @@ public class Checkings {
     }
 
 
-    public static int ringsNumber(Tank tank) {
+    static int ringsNumber(Tank tank) {
         int number = 0;
         if(!tank.getRing1Text().equals("")) number++;
         if(!tank.getRing2Text().equals("")) number++;
@@ -61,7 +60,7 @@ public class Checkings {
         return number;
     }
 
-    public static void diamRingDiscrep() {
+    private static void diamRingDiscrep() {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Checkings.class.getResource("/fxml/DiamRingsDiscrepancy.fxml"));
 
@@ -74,6 +73,8 @@ public class Checkings {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.showAndWait();
+
+        throw new RuntimeException("");
     }
 
 }

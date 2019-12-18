@@ -40,6 +40,5 @@ public class InformationController {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
-
     }
 }

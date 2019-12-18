@@ -59,7 +59,7 @@ public class Tank {
 
 
 
-    public String getDiameterText() {
+    String getDiameterText() {
         return diameterText;
     }
 
@@ -67,7 +67,7 @@ public class Tank {
         this.diameterText = diameterText;
     }
 
-    public String getRing1Text() {
+    String getRing1Text() {
         return ring1Text;
     }
 
@@ -75,7 +75,7 @@ public class Tank {
         this.ring1Text = ring1Text;
     }
 
-    public String getRing2Text() {
+    String getRing2Text() {
         return ring2Text;
     }
 
@@ -83,7 +83,7 @@ public class Tank {
         this.ring2Text = ring2Text;
     }
 
-    public String getRing3Text() {
+    String getRing3Text() {
         return ring3Text;
     }
 
@@ -91,7 +91,7 @@ public class Tank {
         this.ring3Text = ring3Text;
     }
 
-    public String getRing4Text() {
+    String getRing4Text() {
         return ring4Text;
     }
 
@@ -99,7 +99,7 @@ public class Tank {
         this.ring4Text = ring4Text;
     }
 
-    public String getRing5Text() {
+    String getRing5Text() {
         return ring5Text;
     }
 
@@ -107,7 +107,7 @@ public class Tank {
         this.ring5Text = ring5Text;
     }
 
-    public String getRing6Text() {
+    String getRing6Text() {
         return ring6Text;
     }
 
@@ -115,7 +115,7 @@ public class Tank {
         this.ring6Text = ring6Text;
     }
 
-    public String getRing7Text() {
+    String getRing7Text() {
         return ring7Text;
     }
 
@@ -123,7 +123,7 @@ public class Tank {
         this.ring7Text = ring7Text;
     }
 
-    public String getRing8Text() {
+    String getRing8Text() {
         return ring8Text;
     }
 
@@ -131,7 +131,7 @@ public class Tank {
         this.ring8Text = ring8Text;
     }
 
-    public String getRing9Text() {
+    String getRing9Text() {
         return ring9Text;
     }
 
@@ -139,7 +139,7 @@ public class Tank {
         this.ring9Text = ring9Text;
     }
 
-    public String getRing10Text() {
+    String getRing10Text() {
         return ring10Text;
     }
 
@@ -147,7 +147,7 @@ public class Tank {
         this.ring10Text = ring10Text;
     }
 
-    public String getRing11Text() {
+    String getRing11Text() {
         return ring11Text;
     }
 
@@ -155,7 +155,7 @@ public class Tank {
         this.ring11Text = ring11Text;
     }
 
-    public String getRing12Text() {
+    String getRing12Text() {
         return ring12Text;
     }
 
@@ -163,7 +163,7 @@ public class Tank {
         this.ring12Text = ring12Text;
     }
 
-    public String getBottomRimThiknessText() {
+    String getBottomRimThiknessText() {
         return bottomRimThiknessText;
     }
 
@@ -171,7 +171,7 @@ public class Tank {
         this.bottomRimThiknessText = bottomRimThiknessText;
     }
 
-    public String getBottomCenterThiknessText() {
+    String getBottomCenterThiknessText() {
         return bottomCenterThiknessText;
     }
 
@@ -179,7 +179,7 @@ public class Tank {
         this.bottomCenterThiknessText = bottomCenterThiknessText;
     }
 
-    public String getRoofThiknessText() {
+    String getRoofThiknessText() {
         return roofThiknessText;
     }
 
@@ -187,7 +187,7 @@ public class Tank {
         this.roofThiknessText = roofThiknessText;
     }
 
-    public String getInsulationWeightText() {
+    String getInsulationWeightText() {
         return insulationWeightText;
     }
 
@@ -195,7 +195,7 @@ public class Tank {
         this.insulationWeightText = insulationWeightText;
     }
 
-    public String getHeaterWeightText() {
+    String getHeaterWeightText() {
         return heaterWeightText;
     }
 
@@ -211,7 +211,7 @@ public class Tank {
         this.otherWeight1NameText = otherWeight1NameText;
     }
 
-    public String getOtherWeight1Text() {
+    String getOtherWeight1Text() {
         return otherWeight1Text;
     }
 
@@ -227,7 +227,7 @@ public class Tank {
         this.otherWeight2NameText = otherWeight2NameText;
     }
 
-    public String getOtherWeight2Text() {
+    String getOtherWeight2Text() {
         return otherWeight2Text;
     }
 

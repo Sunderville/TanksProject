@@ -1,11 +1,7 @@
 //package com.sunderville.tanks.database;
 //
 //
-//
 ////Заготовка для подключения DB
-//
-//
-//
 //
 //
 //public class ColumnsBending {

@@ -21,42 +21,37 @@
             </Text>
             <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Диаметр" />
             <Text layoutX="171.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
-            <Text layoutX="38.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Толщина по поясам" />
+            <Text layoutX="14.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Толщина по поясам (мм)" />
             <TextField fx:id="ring12" layoutX="95.0" layoutY="128.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18000" />
             <Text layoutX="38.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 пояс" />
             <TextField fx:id="ring11" layoutX="95.0" layoutY="159.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
             <Text layoutX="38.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11 пояс" />
             <TextField fx:id="ring10" layoutX="95.0" layoutY="190.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15000" />
             <Text layoutX="38.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 пояс" />
             <TextField fx:id="ring9" layoutX="95.0" layoutY="222.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
             <Text layoutX="38.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9 пояс" />
             <TextField fx:id="ring8" layoutX="95.0" layoutY="253.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12000" />
             <Text layoutX="38.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8 пояс" />
             <TextField fx:id="ring7" layoutX="95.0" layoutY="284.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
             <Text layoutX="38.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7 пояс" />
             <TextField fx:id="ring6" layoutX="95.0" layoutY="316.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9000" />
             <Text layoutX="38.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6 пояс" />
             <TextField fx:id="ring5" layoutX="95.0" layoutY="347.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7500" />
             <Text layoutX="38.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 пояс" />
             <TextField fx:id="ring4" layoutX="95.0" layoutY="378.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6000" />
             <Text layoutX="38.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4 пояс" />
             <TextField fx:id="ring3" layoutX="95.0" layoutY="407.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
+            <Text layoutX="145.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4500" />
             <Text layoutX="38.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 пояс" />
             <TextField fx:id="ring2" layoutX="95.0" layoutY="438.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
             <Text layoutX="38.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 пояс" />
             <TextField fx:id="ring1" layoutX="95.0" layoutY="469.0" prefHeight="25.0" prefWidth="39.0" />
-            <Text layoutX="145.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", мм" />
             <Text layoutX="38.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 пояс" />
             <Text layoutX="265.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Днище">
                <font>
@@ -122,19 +117,19 @@
                   <MenuItem fx:id="s12selection" mnemonicParsing="false" onAction="#s12selected" text="12Х18Н10Т" />
               </items>
             </MenuButton>
-            <TextField fx:id="result_mass" layoutX="400.0" layoutY="408.0" prefHeight="101.0" prefWidth="104.0">
+            <TextField fx:id="result_mass" layoutX="394.0" layoutY="408.0" prefHeight="101.0" prefWidth="120.0">
                <font>
-                  <Font name="System Bold" size="36.0" />
+                  <Font name="System Bold" size="32.0" />
                </font>
             </TextField>
             <TextField fx:id="ton_price" layoutX="540.0" layoutY="278.0" prefHeight="35.0" prefWidth="148.0" />
-            <Text layoutX="404.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Масса (т)" />
+            <Text layoutX="393.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Масса (т)" />
             <Text layoutX="545.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена за тонну (тыс. руб.)" />
             <TextField fx:id="result_price" layoutX="236.0" layoutY="456.0" prefHeight="51.0" prefWidth="148.0">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></TextField>
-            <Text layoutX="241.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Стоимость м/к (руб.)" />
+            <Text layoutX="241.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Стоимость м/к (тыс. руб.)" />
             <Line endX="-5.0" endY="411.0" layoutX="215.0" layoutY="112.0" startX="-5.0" startY="-92.0" />
             <MenuButton fx:id="diameter" layoutX="70.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Выберите диаметр">
                <items>

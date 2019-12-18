@@ -1,44 +1,47 @@
 package com.sunderville.tanks.domain;
 
 
+// Возможно, стоит переделать на BigDecimal
+
+
 public class Bottom {
 
-    private static final long rimWidth = 1330;
+    private static final double rimWidth = 1.33;
 
-    public static long getBottomVolume(Tank tank) {
+    public static double getBottomVolume(Tank tank) {
 
         return getCenterVolume(tank.getDiameterText(), tank.getBottomCenterThiknessText()) +
                 getRimVolume(tank.getDiameterText(), tank.getBottomRimThiknessText());
     }
 
-    private static long getCenterVolume(String diameter, String center) {
+    private static double getCenterVolume(String diameter, String center) {
 
         if(center.equals("")) center = "0";
 
-        long diameter1 = Integer.parseInt(diameter);
-        long diameter2center = diameter1 - rimWidth*2L;
+        double diameter1 = Double.parseDouble(diameter)/1000d;
+        double diameter2center = diameter1 - rimWidth*2d;
 
-        long radiusCenter = diameter2center/2L;
+        double radiusCenter = diameter2center/2d;
 
-        long centerSquare = 3140L * (radiusCenter * radiusCenter);
+        double centerSquare = 3.14d * (radiusCenter * radiusCenter);
 
-        return centerSquare * Long.parseLong(center)/1000000L;
+        return centerSquare * Double.parseDouble(center)/1000d;
     }
 
-    private static long getRimVolume(String diameter, String rim) {
+    private static double getRimVolume(String diameter, String rim) {
 
         if(rim.equals("")) rim = "0";
 
-        long diameter1 = Integer.parseInt(diameter);
-        long diameter2center = diameter1 - rimWidth*2L;
+        double diameter1 = Double.parseDouble(diameter)/1000d;
+        double diameter2center = diameter1 - rimWidth*2d;
 
-        long radiusBig = diameter1/2L;
-        long radiusCenter = diameter2center/2L;
+        double radiusBig = diameter1/2d;
+        double radiusCenter = diameter2center/2d;
 
-        long wholeSquare = 3140L * (radiusBig * radiusBig);
-        long centerSquare = 3140L * (radiusCenter * radiusCenter);
-        long rimSquare = wholeSquare - centerSquare;
+        double wholeSquare = 3.14d * (radiusBig * radiusBig);
+        double centerSquare = 3.14d * (radiusCenter * radiusCenter);
+        double rimSquare = wholeSquare - centerSquare;
 
-        return (rimSquare * Integer.parseInt(rim)) / 1000000L;
+        return (rimSquare * Double.parseDouble(rim)/1000d);
     }
 }

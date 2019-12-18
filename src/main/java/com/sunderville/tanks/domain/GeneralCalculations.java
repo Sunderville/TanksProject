@@ -1,8 +1,7 @@
 package com.sunderville.tanks.domain;
 
-// Ready to use
-
-import com.sunderville.tanks.MainWindowController;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import static com.sunderville.tanks.domain.Bottom.getBottomVolume;
 import static com.sunderville.tanks.domain.Density.getDensityByString;
@@ -15,19 +14,29 @@ public class GeneralCalculations {
 
     public static double resultMass(Tank tank, String steelType) {
 
-        double density = getDensityByString(steelType) / 1000.0;
+        double density = getDensityByString(steelType);
 
-        return (getShellVolume(tank) + getBottomVolume(tank))/100000.0 * density + getActualRoofMass(tank)/1000.0 + getEtcMass(tank)/1000.0;
+        double heaterWeight = tank.getHeaterWeightText().equals("") ? 0d : Double.parseDouble(tank.getHeaterWeightText());
+        double insulationWeight = tank.getInsulationWeightText().equals("") ? 0d : Double.parseDouble(tank.getInsulationWeightText());
+        double otherWeight1 = tank.getOtherWeight1Text().equals("") ? 0d : Double.parseDouble(tank.getOtherWeight1Text());
+        double otherWeight2 = tank.getOtherWeight2Text().equals("") ? 0d : Double.parseDouble(tank.getOtherWeight2Text());
+
+        double EtcMass = getEtcMass(tank);
+        if(getBottomVolume(tank) == 0 || getActualRoofMass(tank) == 0) EtcMass = 0;
+
+        double result = (getShellVolume(tank) + getBottomVolume(tank)) * density + getActualRoofMass(tank) + EtcMass +
+                heaterWeight + insulationWeight + otherWeight1 + otherWeight2;
+
+        return new BigDecimal(result).setScale(1, RoundingMode.UP).doubleValue();
     }
 
 
 
-    public static long resultPrice(Tank tank, String ton_price) {
+    public static int resultPrice(Tank tank, String steelType, String ton_price) {
 
         if (ton_price.equals("")) ton_price = "0";
 
-        return 0;
-//        return resultMass(tank, MainWindowController.getSteel_type().getText()) * Integer.parseInt(ton_price);
+        return (int)resultMass(tank, steelType) * Integer.parseInt(ton_price);
     }
 
 }
